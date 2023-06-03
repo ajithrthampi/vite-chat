@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useRef } from 'react'
-import { AuthContext } from '../context/AuthContext'
-import { ChatContext } from '../context/ChatContext'
+import React, {useContext, useEffect, useRef} from 'react'
+import {AuthContext} from '../context/AuthContext'
+import {ChatContext} from '../context/ChatContext'
 
 const Messages = ({message}) => {
 
     const {currentUser} = useContext(AuthContext)
     const {data} = useContext(ChatContext)
-    
-   
+
+
     const ref = useRef()
 
     useEffect(() => {
@@ -16,32 +16,72 @@ const Messages = ({message}) => {
 
 
     return (
-        <div classNameName='bg-yellow-600'>
-            <div className="flex flex-col flex-grow absolute right-0 top-20 bottom-20  left-0  overflow-hidden  ">
-                <div className="flex flex-col flex-grow h-0 p-4 overflow-auto no-scrollbar">
+        <div className=' d:block z-0 '
+            ref={ref}>
+            <div className="flex-1   justify-between flex flex-col">
 
-                    <div className="flex w-full mt-2 space-x-3 max-w-xs">
-                        <img className="flex-shrink-0 md:h-10 md:w-10 h-7 w-7 rounded-full object-cover" src="https://images.pexels.com/photos/1499327/pexels-photo-1499327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
-                        <div className='text-white'>
-                            <div className="bg-gradient-to-r md:py-6 py-4 bg-[rgb(31,39,71)] from-[rgb(231,92,64)] via-[rgb(111,67,112)] to-[rgb(39,47,109)] p-3 rounded-r-xl rounded-bl-xl">
-                                <p className="text-sm ">Lorem ipsum dolor sit amet, consectetur adipiscing eliteeweewew........</p>
+                <div id="messages" class="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch">
+                    {
+                    message.senderId === currentUser.uid ? <>
+                        <div class=" ">
+                            <div class="flex items-end ">
+                                <div class="flex flex-col space-y- text-xs max-w-xs mx-2 order-2 items-start">
+                                    <div> {
+                                        message.text && <span class="px-5 py-4 rounded-lg inline-block rounded-bl-none bg-gradient-to-r bg-[rgb(31,39,71)]  from-[rgb(231,92,64)] from-10% via-[rgb(111,67,112)] via-50% transition- to-[rgb(39,47,109)] to-90% text-gray-200">
+                                            {
+                                            message ?. text
+                                        } </span>
+                                    }
+
+                                        {
+                                        message.img && <div>
+                                            <img className=' h-60 object-cover rounded-md'
+                                                src={
+                                                    message.img
+                                                }
+                                                alt=""/>
+                                        </div>
+                                    } </div>
+                                </div>
+                                <img src={
+                                        // data.user.photoURL
+                                        currentUser.photoURL
+                                    }
+                                    alt="My profile"
+                                    class="w-6 h-6 rounded-full order-1 object-cover"/>
                             </div>
-                            <span className="text-xs text-gray-500 leading-none">2 min ago</span>
                         </div>
-                    </div>
-
-
-                    <div className="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
-                        <div>
-                            <div className="bg-[rgb(31,39,71)] md:py-6 py-4 text-white p-3 rounded-l-xl rounded-br-xl">
-                                <p className="text-sm">How are you</p>
+                    </> : <>
+                        <div class="chat-message">
+                            <div class="flex items-end justify-end">
+                                <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">
+                                    <div> {
+                                        message.text && <span class="px-6 py-4 rounded-lg inline-block rounded-br-none bg-[rgb(31,39,71)] text-white ">
+                                            {
+                                            message ?. text
+                                        } </span>
+                                    }
+                                        {
+                                        message.img && <div>
+                                            <img className=' h-60 object-cover  rounded-md'
+                                                src={
+                                                    message ?. img
+                                                }
+                                                alt=""/>
+                                        </div>
+                                    } </div>
+                                </div>
+                                <img src={
+                                        data.user.photoURL
+                                    }
+                                    alt="My profile"
+                                    class="w-6 h-6 rounded-full order-2 object-cover"/>
                             </div>
-                            <span className="text-xs text-gray-500 leading-none">2 min ago</span>
                         </div>
-                        <img className="flex-shrink-0 md:h-10 md:w-10 h-7 w-7 rounded-full object-cover" src="https://images.pexels.com/photos/1499327/pexels-photo-1499327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
-                    </div>
+                    </>
+                } </div>
 
-                </div>
+
             </div>
         </div>
     )

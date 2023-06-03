@@ -13,7 +13,7 @@ const Homepage = () => {
                 <div className='col-span-1 relative  hidden md:block'>
                     <Sidebar/>
                 </div>
-                <div className='col-span-4 relative hidden md:block'>
+                <div className='col-span-4 md:relative '>
                     <Userchat/>
                 </div>
                 <div className='col-span-7 md:relative '>

@@ -45,7 +45,7 @@ const Search = () => {
     // click search user
     const handleSelect = async () => { // check whether  the group( chats in firestore) exists, if not create.
         const combinedId = currentUser.uid > user.uid ? currentUser.uid + user.uid : user.uid + currentUser.uid
-        console.log(combinedId);
+        
         try {
             const res = await getDoc(doc(db, "chats", combinedId));
 
@@ -102,8 +102,8 @@ const Search = () => {
                                 fixed  bg-opacity-25 backdrop-blur-sm
                                 md:fle justify-center items-center z-20 md:w-[27%] w-full
                                 '>
-                                    <div className='absolut'>
-                <div className=' flex items-center p-2 gap-3 bg-[rgb(231,92,64)] rounded-xl  cursor-pointer w-screen md:w-full relative '
+                                    <div className=''>
+                <div className=' flex items-center p-2 gap-3 bg-[rgb(231,92,64)] rounded-xl mt-5  cursor-pointer mr-10 md:mr-0 md:w-full relative '
                     onClick={handleSelect}>
                     <img className='h-16 w-16 bg-red-400 rounded-full object-cover'
                         src={
@@ -115,7 +115,7 @@ const Search = () => {
                         user.displayName
                     }</h1>
                 </div>
-                <h1 className=' absolute top-7 right-9 cursor-pointer text-gray-300' onClick={handleClose}><IoMdCloseCircleOutline size={26}/></h1>
+                <h1 className=' absolute top-12 right-12 md:right-1 cursor-pointer text-gray-300' onClick={handleClose}><IoMdCloseCircleOutline size={26}/></h1>
                 </div>
             </div>
         }

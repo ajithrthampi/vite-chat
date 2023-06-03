@@ -29,7 +29,7 @@ const Register = () => {
 
     const handleImageUpload = (e) => {
         const Image = e.target.files[0]
-        // console.log("[p[p[p[p[p[p", Image);
+        
 
         setProfilePic(URL.createObjectURL(e.target.files[0]))
     }
@@ -115,7 +115,7 @@ const Register = () => {
 
         const email = e.target[0].value;
         const password = e.target[1].value;
-        console.log(email, password);
+       
 
         try {
           await signInWithEmailAndPassword(auth, email, password)
@@ -123,7 +123,7 @@ const Register = () => {
           navigate("/home")
         } catch (error) {
           if(error.code === 'auth/user-not-found'){
-            console.log("No user");
+            
             setErrLOgin("User does not exist.")
          } if(error.code === "auth/invalid-email"){
           setErrLOgin("Please add an email")
@@ -131,10 +131,7 @@ const Register = () => {
           setErrLOgin("Please Enter password")
          } if(error.code === 'auth/wrong-password'){
           setErrLOgin("Password is wrong")
-         }
-           
-            console.log("errrrrrr",error);
-            
+         }        
         }
     }
 

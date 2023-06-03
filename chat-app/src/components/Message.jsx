@@ -3,6 +3,7 @@ import Messages from './Messages'
 import { ChatContext } from '../context/ChatContext'
 import { doc, onSnapshot } from 'firebase/firestore'
 import { db } from '../firebase'
+import MobileNav from './MobileNav'
 
 const Message = () => {
 
@@ -22,14 +23,19 @@ const Message = () => {
   },[data.chatId])
 
     return (
-        <div className='o'>
+      <div className=' bg-[rgb(32,43,79)] absolute right-0 left-0 top-0 bottom-0 md:right-0 md:left-0 md:bottom24 md:top-24'>
+        <MobileNav/>
+        <div className=' overflow-scroll  scrollbar-hide absolute right-0 left-0 md:-top-7 top-14  bottom-24' >
             {
-            messages.map(m => (
+            messages.map((m,index) => (
                 <>
+                <div key={index}>
                     <Messages message={m} key={m.id}/>
+                    </div>
                 </>
             ))
         } </div>
+        </div>
     )
 }
 

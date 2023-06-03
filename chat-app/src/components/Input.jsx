@@ -1,6 +1,7 @@
 import React, {useContext, useState} from 'react'
 import {ChatContext} from '../context/ChatContext'
 import {AuthContext} from '../context/AuthContext'
+import {FcAddImage} from 'react-icons/fc'
 import {
     Timestamp,
     arrayUnion,
@@ -89,12 +90,30 @@ const Input = () => {
         <div>
             <div className="bg-gray-30 p-3  absolute right-0 left-0 bottom-2">
                 <hr class="border- bg-gray-600  cursor-pointer mb-4 opacity-20   duration-500"/>
-                <input className="flex items-center h-10 bg-[rgb(31,39,71)] w-full rounded-3xl px-3 text-sm py-6" type="text" placeholder="Type your message…"
+                <input className="flex items-center h-10 bg-[rgb(31,39,71)] w-full rounded-3xl px-3 text-sm py-6 text-white" type="text" placeholder="Type your message…"
                     onChange={
                         e => setText(e.target.value)
                     }
                     value={text}/>
             </div>
+            <input className='hidden' type="file" id="file"
+                            onChange={
+                                // e => setImg(e.target.files[0])
+                                handleImage
+                            }/>
+            <label htmlFor="file" className=' text-3xl absolute bottom-7 cursor-pointer right-20'>
+                            {
+                                profilePic && profilePic ? 
+                                <>
+                                <img className='w-10 h-10 flex justify-center items-center rounded-full object-cover' src={profilePic} alt="" />
+                                </> 
+                                :
+                                <>
+                                  <FcAddImage size={30}/>
+                                </>
+                            }
+                          
+                        </label>
             <button className=' bg-[rgb(231,92,64)] text-white px-3 py-3 rounded-full absolute bottom-6 right-6 '
                 onClick={handleSend}><MdSend/></button>
         </div>
