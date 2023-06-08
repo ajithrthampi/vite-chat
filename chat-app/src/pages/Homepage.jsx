@@ -8,7 +8,7 @@ const Homepage = () => {
     return (
 
         <>
-            <div className='grid grid-cols-12 h-screen'>
+            <div className='grid grid-cols-12 md:h-screen'>
 
                 <div className='col-span-1 relative  hidden md:block'>
                     <Sidebar/>
