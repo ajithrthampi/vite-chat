@@ -10,7 +10,7 @@ const Chats = () => {
         <> {
             data ?. user ?. displayName ? <>
                 <div className=''>
-                    <div class="absolute left-1/ -ml-0.5 w-0.5 h-screen bg-gray-600 opacity-20 hidden md:block"></div>
+                    <div className="absolute left-1/ -ml-0.5 w-0.5 h-screen bg-gray-600 opacity-20 hidden md:block"></div>
                     <div className='hidden md:block'>
                         <div className='flex justify-between pl-5 p-2'>
                             <div className='flex  gap-3 '>

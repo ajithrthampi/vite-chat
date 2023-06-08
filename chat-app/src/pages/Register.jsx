@@ -74,7 +74,6 @@ const Register = () => {
                             await setDoc(doc(db, "userChat", res.user.uid), {})
                             // navigate("/login")
 
-
                         });
                     });
                     setIsSignUpMode(false);
@@ -102,10 +101,9 @@ const Register = () => {
             }
         } else {
             if (! displayName) {
-                setErr("Please give a usernam")
+                setErr("Please give a Username")
 
             }
-
         }
     }
    
@@ -223,7 +221,7 @@ const Register = () => {
                             Register
                         </button>
                     </div>
-                    <img src="/img/dogLogin1.svg" class="image" alt=""/>
+                    <img src="/img/dogLogin1.svg" className="image" alt=""/>
                 </div>
                 <div className="panel right-panel">
                     <div className="content">
@@ -238,7 +236,7 @@ const Register = () => {
                             Login
                         </button>
                     </div>
-                    <img src="/img/dogLogin.svg" class="image" alt=""/>
+                    <img src="/img/dogLogin.svg" className="image" alt=""/>
                 </div>
             </div>
         </div>

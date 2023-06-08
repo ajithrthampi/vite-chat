@@ -5,12 +5,12 @@ import { getStorage, ref } from "firebase/storage";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAQHxRYkgu21hJjuKT8E2W4q5blUvRqPkw",
-  authDomain: "vite-chat-730ce.firebaseapp.com",
-  projectId: "vite-chat-730ce",
-  storageBucket: "vite-chat-730ce.appspot.com",
-  messagingSenderId: "70604548527",
-  appId: "1:70604548527:web:df0493af40d98165aa275a"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_API_ID
 };
 
 

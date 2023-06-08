@@ -31,7 +31,7 @@ const Message = () => {
                 <>
                 <div key={index}>
                     <Messages message={m} key={m.id}/>
-                    </div>
+                </div>
                 </>
             ))
         } </div>
