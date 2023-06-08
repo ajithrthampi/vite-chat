@@ -44,8 +44,8 @@ const Messages = ({message}) => {
                                     } </div>
                                 </div>
                                 <img src={
-                                        // data.user.photoURL
-                                        currentUser.photoURL
+                                        data.user.photoURL
+                                        // currentUser.photoURL
                                     }
                                     alt="My profile"
                                     class="w-6 h-6 rounded-full order-1 object-cover"/>
@@ -72,7 +72,7 @@ const Messages = ({message}) => {
                                     } </div>
                                 </div>
                                 <img src={
-                                        data.user.photoURL
+                                        currentUser.photoURL
                                     }
                                     alt="My profile"
                                     class="w-6 h-6 rounded-full order-2 object-cover"/>
