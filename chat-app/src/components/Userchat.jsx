@@ -57,7 +57,7 @@ const Userchat = () => {
                 <div className='flex flex-col gap-'>
                     <div className='text-white font-mono text-sm'>
                         <div className='flex flex-row gap-1 items-center'>
-                            <h4>
+                            <h4 className='font-poppins'>
                                 Messages
                             </h4>
                             <div className='w-5 h-5 bg-red-400 rounded-full '>
@@ -92,11 +92,11 @@ const Userchat = () => {
                                             }
                                             alt=""/>
                                         <div className='flex flex-col gap-1 text-white '>
-                                            <h3 className='text-sm'>
+                                            <h3 className='text-sm font-poppins'>
                                                 {
                                                 chat[1] ?. userInfo ?. displayName
                                             }</h3>
-                                            <p className='text-xs text-ellipsis whitespace-nowrap    overflow-hidden xl:w-28 md:w-10 w-16'>
+                                            <p className='text-xs text-ellipsis whitespace-nowrap  font-poppins   overflow-hidden xl:w-28 md:w-10 w-16'>
                                                 {
                                                 chat[1] ?. lastMessage ?. text
                                             }</p>

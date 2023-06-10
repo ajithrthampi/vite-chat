@@ -25,9 +25,9 @@ const Messages = ({message}) => {
                     message.senderId !== currentUser.uid ? <>
                         <div className=" ">
                             <div className="flex items-end ">
-                                <div className="flex flex-col space-y- text-xs max-w-xs mx-2 order-2 items-start">
-                                    <div> {
-                                        message.text && <span className="px-5 py-4 rounded-lg inline-block rounded-bl-none bg-gradient-to-r bg-[rgb(31,39,71)]  from-[rgb(231,92,64)] from-10% via-[rgb(111,67,112)] via-50% transition- to-[rgb(39,47,109)] to-90% text-gray-200">
+                                <div className="flex flex-col space-y- text-xs max-w-xs mx-2 order-2 items-start -mt-3 ">
+                                    <div className='flex flex-col  items-start gap-2'> {
+                                        message.text && <span className=" px-2 py-2 font-poppins rounded-lg inline-block rounded-bl-none bg-gradient-to-r bg-[rgb(31,39,71)]  from-[rgb(231,92,64)] from-10% via-[rgb(111,67,112)] via-50% transition- to-[rgb(39,47,109)] to-90% text-gray-200">
                                             {
                                             message ?. text
                                         } </span>
@@ -35,7 +35,7 @@ const Messages = ({message}) => {
 
                                         {
                                         message.img && <div>
-                                            <img className=' h-60 object-cover rounded-md'
+                                            <img className=' h-60 object-cover rounded-md pt-'
                                                 src={
                                                     message.img
                                                 }
@@ -53,16 +53,16 @@ const Messages = ({message}) => {
                         </div>
                     </> : <>
                         <div className="chat-message">
-                            <div className="flex items-end justify-end">
-                                <div className="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">
-                                    <div> {
-                                        message.text && <span className="px-6 py-4 rounded-lg inline-block rounded-br-none bg-[rgb(31,39,71)] text-white ">
+                            <div className="flex items-end justify-end ">
+                                <div className="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end -mt-3 ">
+                                    <div className='flex flex-col items-end gap-2'> {
+                                        message.text && <span className=" px-2 py-2 font-poppins rounded-lg inline-block rounded-br-none bg-[rgb(31,39,71)] text-white ">
                                             {
                                             message ?. text
                                         } </span>
                                     }
                                         {
-                                        message.img && <div>
+                                        message.img && <div >
                                             <img className=' h-60 object-cover  rounded-md'
                                                 src={
                                                     message ?. img
@@ -75,7 +75,7 @@ const Messages = ({message}) => {
                                         currentUser.photoURL
                                     }
                                     alt="My profile"
-                                    className="w-6 h-6 rounded-full order-2 object-cover"/>
+                                    className="w-6 h-6 rounded-full order-2 object-cover hidden md:block"/>
                             </div>
                         </div>
                     </>
