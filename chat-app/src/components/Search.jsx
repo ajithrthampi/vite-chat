@@ -84,14 +84,14 @@ const Search = () => {
     return (
         <div className=''>
             <div className='flex gap-6'>
-                <input className='rounded-xl mt-2 w-full py-2 bg-[rgb(31,39,71)] text-sm placeholder:text-white p-2 text-white' type="text" placeholder='search user'
+                <input className='rounded-xl mt-2 w-full py-2 bg-skin-fill_search text-sm placeholder:text-white p-2 text-white' type="text" placeholder='search user'
                   value={username}
                   onKeyDown={handleKey}
                   onChange={
                       e => setUsername(e.target.value)
                   }
                 />
-                <button className=' px-4 bg-[rgb(31,39,71)] mt-2 py-3 rounded-xl text-xl text-gray-400  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300'
+                <button className=' px-4 bg-skin-fill_search mt-2 py-3 rounded-xl text-xl text-gray-400  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300'
                  onClick={handleSearch}
                 >
                     <FiSearch/>

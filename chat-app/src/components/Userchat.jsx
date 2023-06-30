@@ -8,6 +8,7 @@ import {onSnapshot, doc} from 'firebase/firestore'
 import moment from 'moment'
 import LazyChatUser from './skeletons/LazyChatUser'
 import Header from './Header'
+import { ThemeContext } from './context/ThemeContext'
 
 const Userchat = () => {
 
@@ -16,8 +17,7 @@ const Userchat = () => {
     const [loading, setLoading] = useState(false)
     const [date, setDate] = useState([])
     const {dispatch} = useContext(ChatContext)
-
-
+    const { value, setValue } = useContext(ThemeContext);
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -79,19 +79,19 @@ const Userchat = () => {
                         {
                         Object.entries(chats) ?. sort((a, b) => b[1].date - a[1].date).map((chat, index) => (
 
-                            <div className='  cursor-pointer bg-gradient-to-b bg-[rgb(31,39,71)]   hover:from-[rgb(231,92,64)] from-10% hover:via-[rgb(111,67,112)] via-50% transition- hover:to-[rgb(39,47,109)] to-90% lg:py-5 py-3 px-5 rounded-2xl  border-b-4 border-[rgb(31,39,71)] transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none'
+                            <div className='  cursor-pointer bg-gradient-to-b bg-skin-fill_user_card  text-skin-text_color hover:text-[rgb(253,253,254)]  hover:from-skin-fill_user_card_hover from-10% hover:via-skin-fill_hover_via via-50% transition- hover:to-skin-fill_hover_to to-90% lg:py-5 py-3 px-5 rounded-2xl  shadow-md shadow-skin-card_border_color mx-1  transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none'
                                 key={index}
                                 onClick={
                                     () => handleSelect(chat[1].userInfo)
                             }>
-                                <div className='flex justify-between items-center '>
+                                <div className='flex justify-between items-center  '>
                                     <div className='flex gap-3 justify-center items-center'>
                                         <img className='rounded-full lg:w-14 lg:h-14 md:w-10 md:h-10 h-12 w-12 object-cover'
                                             src={
                                                 chat[1] ?. userInfo ?. photoURL
                                             }
                                             alt=""/>
-                                        <div className='flex flex-col gap-1 text-white '>
+                                        <div className='flex flex-col gap-1  '>
                                             <h3 className='text-sm font-poppins'>
                                                 {
                                                 chat[1] ?. userInfo ?. displayName
@@ -103,7 +103,7 @@ const Userchat = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <p className='text-white text-xs'>
+                                        <p className=' text-xs'>
                                             {
                                             moment(chat[1].date ?. toDate()).fromNow()
                                         } </p>

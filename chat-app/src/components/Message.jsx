@@ -23,7 +23,7 @@ const Message = () => {
   },[data.chatId])
 
     return (
-      <div className=' bg-[rgb(32,43,79)] absolute right-0 left-0 top-0 bottom-0 md:right-0 md:left-0 md:bottom24 md:top-24'>
+      <div className=' bg-skin-fill absolute right-0 left-0 top-0 bottom-0 md:right-0 md:left-0 md:bottom24 md:top-24'>
         <MobileNav/>
         <div className=' overflow-scroll  scrollbar-hide absolute right-0 left-0 md:-top-7 top-14  bottom-24' >
             {

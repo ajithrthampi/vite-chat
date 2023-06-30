@@ -30,7 +30,7 @@ const Chats = () => {
                             {/* <div>kjbkhb</div> */}
                         </div>
                     </div>
-                    <hr className=" bg-gray-600 opacity-20 hidden md:block cursor-pointer  duration-500"/>
+                    <hr className=" bg-gray-600 h-0.5 opacity-20 hidden md:block cursor-pointer  duration-500"/>
                     <div>
                         <Message/>
                     </div>

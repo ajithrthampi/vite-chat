@@ -87,8 +87,8 @@ const Input = () => {
     return (
         <div>
             <div className="bg-gray-30 p-3  absolute right-0 left-0 bottom-2">
-                <hr className="border- bg-gray-600  cursor-pointer mb-4 opacity-20   duration-500"/>
-                <input className="flex items-center h-10 bg-[rgb(31,39,71)] w-full rounded-3xl px-3 text-sm py-6 text-white" type="text" placeholder="Type your message…"
+                <hr className="border- bg-gray-600 h-0.5 cursor-pointer mb-4 opacity-20   duration-500"/>
+                <input className="flex items-center  h-10  bg-skin-fill_input  w-full rounded-3xl px-3 text-sm py-6 text-white" type="text" placeholder="Type your message…"
                     onChange={
                         e => setText(e.target.value)
                     }

@@ -4,10 +4,13 @@ import Homepage from './pages/Homepage'
 // import Login from './pages/Login'
 import Register from './pages/Register'
 import { AuthContext } from './context/AuthContext'
+import { ThemeContext } from './components/context/ThemeContext'
 
 
 
 function App() {
+
+  const [value, setValue] = useState(false)
   const {currentUser} = useContext(AuthContext)
   // console.log("ENV file", process?.env);
 
@@ -18,9 +21,16 @@ function App() {
     return children
 }
 
+
+
+
+
   return (
     <>
-      <div className=''>
+      <div className={
+        value === true ? "theme-light" : ""
+      }>
+        <ThemeContext.Provider value={{value, setValue}}>
         <Router>
           <Routes> 
             <Route path="/" element={<Register/>}/>
@@ -31,6 +41,7 @@ function App() {
             }/>
           </Routes>
         </Router>
+        </ThemeContext.Provider>
       </div>
     </>
   )

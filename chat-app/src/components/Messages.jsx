@@ -27,7 +27,7 @@ const Messages = ({message}) => {
                             <div className="flex items-end ">
                                 <div className="flex flex-col space-y- text-xs max-w-xs mx-2 order-2 items-start -mt-3 ">
                                     <div className='flex flex-col  items-start gap-2'> {
-                                        message.text && <span className=" px-2 py-2 font-poppins rounded-lg inline-block rounded-bl-none bg-gradient-to-r bg-[rgb(31,39,71)]  from-[rgb(231,92,64)] from-10% via-[rgb(111,67,112)] via-50% transition- to-[rgb(39,47,109)] to-90% text-gray-200">
+                                        message.text && <span className=" px-2 py-2 font-poppins rounded-lg inline-block rounded-bl-none bg-gradient-to-r bg-skin-fill_user_card   from-skin-fill_user_card_hover from-10% via-skin-fill_hover_via via-50% transition- to-skin-fill_hover_to to-90% text-gray-200">
                                             {
                                             message ?. text
                                         } </span>

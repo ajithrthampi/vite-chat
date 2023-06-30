@@ -5,7 +5,46 @@
 @tailwind utilities;
 
 * body{
-    background-color: rgb(32,43,79)
+    /* background-color: rgb(32,43,79) */
+}
+
+@layer base{
+    :root{
+        --fill-bg-color: rgb(32,43,79);
+        --fill-sidebar-color: rgb(36,48,91);
+        --fill-sidebar-icon-color: rgb(255,255,255);
+        --text-color: rgb(255,255,255);
+        --fill-search-color: rgb(31,39,71);
+
+        --fill-input: rgb(31,39,71);
+
+
+        --fill-user-card-color: rgb(31,39,71);
+        --text-user-card-color:rgb(253,253,254);     
+        --text-hover-color:rgb(253,253,254);     
+        --hover-card-from:  rgb(231,92,64);
+        --hover-via: rgb(111,67,112);
+        --hover-to: rgb(39,47,109);
+
+        --border: rgb(31,39,71);
+    }
+    .theme-light {
+        
+        --fill-bg-color: rgb(255,255,255);
+        --fill-sidebar-color: rgb(245,245,245);
+        --fill-sidebar-icon-color: rgb(122,122,122);
+        --text-color: rgb(80,80,80);
+        --fill-search-color:rgb(245,245,245);
+
+        --fill-input: rgb(238,238,238);
+
+        --fill-user-card-color: rgb(255,255,255);
+        --text-user-card-color: rgb(57,57,57);
+        --hover-card-from:  rgb(231,92,64);
+        --hover-via: rgb(231,92,64);
+        --hover-to: rgb(231,92,64);
+        --border: rgb(235,235,235);
+    }
 }
 
 @layer utilities {
