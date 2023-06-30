@@ -8,7 +8,7 @@ import {onSnapshot, doc} from 'firebase/firestore'
 import moment from 'moment'
 import LazyChatUser from './skeletons/LazyChatUser'
 import Header from './Header'
-import { ThemeContext } from './context/ThemeContext'
+
 
 const Userchat = () => {
 
@@ -17,7 +17,7 @@ const Userchat = () => {
     const [loading, setLoading] = useState(false)
     const [date, setDate] = useState([])
     const {dispatch} = useContext(ChatContext)
-    const { value, setValue } = useContext(ThemeContext);
+
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -46,7 +46,7 @@ const Userchat = () => {
 
     const messageChatLength = Object.keys(chats);
 
-    // console.log(propertyNames);
+   console.log("Userhat");
 
 
     return (
@@ -55,13 +55,13 @@ const Userchat = () => {
             <div className=' rounded-2xl absolute left-0 right-0 m-5 top-10 bottom-0 flex flex-col gap-7 '>
 
                 <div className='flex flex-col gap-'>
-                    <div className='text-white font-mono text-sm'>
+                    <div className='text-skin-text_color font-mono text-sm'>
                         <div className='flex flex-row gap-1 items-center'>
                             <h4 className='font-poppins'>
                                 Messages
                             </h4>
                             <div className='w-5 h-5 bg-red-400 rounded-full '>
-                                <p className='flex justify-center items-center pt-0.5 text-xs'>
+                                <p className='flex justify-center items-center pt-0.5 text-xs text-white'>
                                     {
                                     messageChatLength ?. length
                                 } </p>

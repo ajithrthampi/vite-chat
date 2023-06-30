@@ -13,7 +13,7 @@ import {
     where
 } from "firebase/firestore";
 import { db } from '../firebase';
-import {IoMdClose, IoMdCloseCircleOutline} from 'react-icons/io';
+import { IoMdCloseCircleOutline} from 'react-icons/io';
 
 const Search = () => {
 
@@ -84,7 +84,7 @@ const Search = () => {
     return (
         <div className=''>
             <div className='flex gap-6'>
-                <input className='rounded-xl mt-2 w-full py-2 bg-skin-fill_search text-sm placeholder:text-white p-2 text-white' type="text" placeholder='search user'
+                <input className='rounded-xl mt-2 w-full py-2 bg-skin-fill_search text-sm placeholder:text-white p-2 text-skin-text_color' type="text" placeholder='search user'
                   value={username}
                   onKeyDown={handleKey}
                   onChange={

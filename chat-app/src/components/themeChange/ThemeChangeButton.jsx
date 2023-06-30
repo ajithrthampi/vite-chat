@@ -11,6 +11,7 @@ const ThemeChangeButton = () => {
     setValue(prevValue => !prevValue);
   };
 
+  console.log("Theme");
 
   return (
     <div className={`dark_mode ${value ? 'dark_mode--active' : ''}`}>

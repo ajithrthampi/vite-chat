@@ -5,6 +5,7 @@ import { doc, onSnapshot } from 'firebase/firestore'
 import { db } from '../firebase'
 import MobileNav from './MobileNav'
 
+
 const Message = () => {
 
   const [messages, setMessages] = useState([])

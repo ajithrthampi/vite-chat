@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar'
 import Userchat from '../components/Userchat'
 import Message from '../components/Message'
 import Chats from '../components/Chats'
+import  { memo } from 'react';
 
 const Homepage = () => {
     return (
@@ -26,4 +27,5 @@ const Homepage = () => {
     )
 }
 
-export default Homepage
+export default memo(Homepage);
+
