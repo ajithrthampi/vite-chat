@@ -7,9 +7,7 @@ const MobileNav = () => {
     const [state, setState] = useState("")
     const {data} = useContext(ChatContext)
     const {dispatch} = useContext(ChatContext)
-    // if(data){
-    //     setState(data)
-    // }
+
     useEffect(() => {
         if(data){
             setState(data)

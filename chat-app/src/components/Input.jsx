@@ -96,7 +96,7 @@ const Input = () => {
             </div>
             <input className='hidden' type="file" id="file"
                             onChange={
-                                // e => setImg(e.target.files[0])
+                             
                                 handleImage
                             }/>
             <label htmlFor="file" className=' text-3xl absolute bottom-7 cursor-pointer right-20'>

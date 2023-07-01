@@ -18,7 +18,7 @@ const LazyChatUser = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="h-2 bg-[#7969f3] rounded w-[70px] col-span-1"></div> */}
+                       
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@ const LazyChatUser = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="h-2 bg-[#7969f3] rounded w-[70px] col-span-1"></div> */}
+                        
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@ const LazyChatUser = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="h-2 bg-[#7969f3] rounded w-[70px] col-span-1"></div> */}
+                       
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@ const LazyChatUser = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="h-2 bg-[#7969f3] rounded w-[70px] col-span-1"></div> */}
+                       
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@ const LazyChatUser = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="h-2 bg-[#7969f3] rounded w-[70px] col-span-1"></div> */}
+                     
                     </div>
                 </div>
             </div>
