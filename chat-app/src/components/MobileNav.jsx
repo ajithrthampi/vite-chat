@@ -14,11 +14,9 @@ const MobileNav = () => {
         }
     }, [data])
    
- 
     const handleClose = () => {
         dispatch({type: "TOGLE_MODAL", })
     }
-
   return (
     <>
      

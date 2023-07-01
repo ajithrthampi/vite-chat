@@ -27,7 +27,7 @@ const Chats = () => {
                                     <p className='text-xs text-gray-400'>Last seen today</p>
                                 </div>
                             </div>
-                            {/* <div>kjbkhb</div> */}
+                           
                         </div>
                     </div>
                     <hr className=" bg-gray-600 h-0.5 opacity-20 hidden md:block cursor-pointer  duration-500"/>
