@@ -9,7 +9,7 @@ const Homepage = () => {
     return (
 
         <>
-            <div className='theme-ligh grid grid-cols-12 bg-skin-fill'>
+            <div className='theme-ligh grid grid-cols-12 md:h-screen bg-skin-fill'>
 
                 <div className='col-span-1 relative  hidden md:block'>
                     <Sidebar/>

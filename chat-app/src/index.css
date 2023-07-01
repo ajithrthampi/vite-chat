@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 * body{
-    /* background-color: rgb(32,43,79) */
+    /* background-color: var(--fill-bg-color) */
 }
 
 @layer base{

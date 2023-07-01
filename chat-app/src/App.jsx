@@ -20,7 +20,7 @@ function App() {
     <>
       <div className={
         value === true ? "theme-light" : null
-      }>
+      } >
         <ThemeContext.Provider value={{value, setValue}}>
         <Router>
           <Routes> 
