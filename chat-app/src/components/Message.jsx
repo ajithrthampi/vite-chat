@@ -31,7 +31,7 @@ const Message = () => {
             messages.map((m,index) => (
                 <>
                 <div key={index}>
-                    <Messages message={m} key={m.id}/>
+                    <Messages message={m} keys={m.id}/>
                 </div>
                 </>
             ))

@@ -49,7 +49,7 @@ const Sidebar = () => {
                         </div>
                     </div>
                 </div>
-               <div className='absolut  '>
+               <div className='absolut pr-2 '>
                 <ThemeChangeButton/>
                </div>
             </div>

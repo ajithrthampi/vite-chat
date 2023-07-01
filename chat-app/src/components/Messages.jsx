@@ -17,7 +17,7 @@ const Messages = ({message}) => {
 
 
     return (
-        <div className=' d:block z-0 '
+        <div className=' d:block z-0 ' 
             ref={ref}>
             <div className="flex-1   justify-between flex flex-col">
 

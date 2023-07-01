@@ -6,6 +6,7 @@ import {FiUsers} from 'react-icons/fi';
 import {GoReport} from 'react-icons/go';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase';
+import ThemeChangeButton from './themeChange/ThemeChangeButton';
 
 const Header = () => {
 
@@ -29,31 +30,26 @@ const Header = () => {
                             }
                             alt=""/>
                         <div className='text-white absolute right-5'
-                            onClick={handleModal}>
-                            <BsCaretDown/> {
+                            onClick={handleModal}
+                           >
+                            <BsCaretDown/>
+                            
+                        </div>
+                        {
                             < div > {
                                 show && <div>
-                                    <div className='absolute z-30 bg-[#635ed1] right-0  top-8  rounded-lg py-2 dro-shadow-md'>
-                                        <div className='w-40'>
-                                            {/* <div className=' '>
+                                    <div className='absolute z-30 bg-skin-fill_sidebar right-0  top-16  rounded-lg py-2 dro-shadow-md'>
+                                        <div className='w-[200px] text-skin-text_color'>
+                                               <div className=' '>
                                                 <div className='flex items-center justify-start gap-3 pl-2'>
+                                                <h4 className='font-Mulish text-sm '>Change Theme</h4>
                                                     <div className='text-lg '>
-                                                        <FiUsers/>
+                                                       <ThemeChangeButton/>
                                                     </div>
-                                                    <h4 className='font-Mulish text-sm -[#141E0D]  '>Profile</h4>
+                                                    
                                                 </div>
                                                 <hr className="h-px my-3  bg-gray-200 border-0 dark:bg-gray-700"></hr>
                                             </div>
-
-                                            <div className=' '>
-                                                <div className='flex items-center justify-start gap-3 pl-2'>
-                                                    <div className='text-lg '>
-                                                        <HiOutlinePhone/>
-                                                    </div>
-                                                    <h4 className='font-Mulish text-sm '>Share Numbers</h4>
-                                                </div>
-                                                <hr className="h-px my-3  bg-gray-200 border-0 dark:bg-gray-700"></hr>
-                                            </div> */}
 
                                             <div className=' '>
                                                 <div className='flex items-center justify-start gap-3 pl-2 '
@@ -73,7 +69,7 @@ const Header = () => {
                                     </div>
                                 </div>
                             } </div>
-                        } </div>
+                        } 
 
                     </div>
                 </div>

@@ -46,9 +46,6 @@ const Userchat = () => {
 
     const messageChatLength = Object.keys(chats);
 
-   console.log("Userhat");
-
-
     return (
         <>
             <Header/>
